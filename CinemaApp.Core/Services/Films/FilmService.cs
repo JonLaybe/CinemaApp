@@ -4,9 +4,6 @@ using CinemaApp.Core.Models.Film;
 using CinemaApp.Core.Models.Genres;
 using CinemaApp.Core.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Xml.Linq;
-using СinemaApp.Domain.Entities;
-using СinemaApp.MVVM.Model.Entities;
 
 namespace CinemaApp.Core.Services.Films
 {

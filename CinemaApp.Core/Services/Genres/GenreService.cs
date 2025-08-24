@@ -2,7 +2,6 @@
 using CinemaApp.Core.Models.Genres;
 using CinemaApp.Core.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using СinemaApp.Domain.Entities;
 
 namespace CinemaApp.Core.Services.Genres
 {
