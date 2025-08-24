@@ -1,5 +1,11 @@
 # Cinema App
 
+<p align="start">
+   <img src="https://img.shields.io/badge/v9.0.8-NETFrameworkCore.Sqlite-blue" alt=".NETFramework">
+  <img src="https://img.shields.io/badge/v0.1.1-FFImageLoadingCompat.Svg-green" alt=".NETFramework">
+  <img src="https://img.shields.io/badge/License-MIT-suggess" alt="License">
+</p>
+
 Мобильное приложение для поиска и отображения информации о кинофильмах, позволяет искать кинофильмы по
 одному или нескольким критериям и отображать информацию по выбранному кинофильму.
 
