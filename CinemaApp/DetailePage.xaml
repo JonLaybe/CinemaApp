@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Maui;assembly=FFImageLoading.Compat.Svg.Maui"
+             xmlns:vm="clr-namespace:СinemaApp.MVVM.ViewModels"
+             xmlns:modelActors="clr-namespace:CinemaApp.Core.Models.Actors;assembly=CinemaApp.Core"
+             xmlns:modelGenres="clr-namespace:CinemaApp.Core.Models.Genres;assembly=CinemaApp.Core"
+             x:Class="CinemaApp.DetailePage"
+             x:DataType="vm:DetaileViewModel">
+    <Grid Margin="5" Padding="10" ColumnSpacing="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid VerticalOptions="Start" Background="{StaticResource BackgroundPreviewMove}">
+            <Grid.WidthRequest>
+                <OnIdiom x:TypeArguments="x:Double" Default="150" Phone="150" Desktop="302"/>
+            </Grid.WidthRequest>
+            <Grid.HeightRequest>
+                <OnIdiom x:TypeArguments="x:Double" Default="300" Phone="250" Desktop="453"/>
+            </Grid.HeightRequest>
+            <ffSvg:SvgCachedImage Source="LogoPlay.svg" WidthRequest="25"/>
+        </Grid>
+        <VerticalStackLayout Grid.Column="1" Spacing="2">
+            <Label Style="{StaticResource LabelDetaileNameFilm}" Text="{Binding SelectedFilm.Name}"/>
+            <Label Style="{StaticResource LabelDetaileDescriptionFilm}" Text="{Binding SelectedFilm.Description}"/>
+            <Label Style="{StaticResource LabelСhapter}" Text="Актеры:"/>
+            <CollectionView x:Name="ViewActors" ItemsSource="{Binding SelectedFilm.Actors}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="modelActors:ActorDto">
+                        <Label FontSize="16" Text="{Binding Name}" VerticalTextAlignment="Center"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label Style="{StaticResource LabelСhapter}" Text="Жанры:"/>
+            <CollectionView x:Name="ViewGenres" ItemsSource="{Binding SelectedFilm.Genres}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="modelGenres:GenreDto">
+                        <Label FontSize="16" Text="{Binding Name}" VerticalTextAlignment="Center"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
