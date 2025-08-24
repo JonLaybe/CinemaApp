@@ -55,9 +55,9 @@
   </pre>
   
   # Тестовые данные в БД
-  Заполнение тестовыми данными бд
-  При первом запуске в файле <Code>CinemaApp.MainPage.xaml.cs</code> раскоментировать 19 строчку.
-  При первом запуске в файле <Code>CinemaApp.Infrastructure.Persistence.ApplicationDbContext.cs</code> раскоментировать 19 строчку.
+  <p>Заполнение тестовыми данными бд</p>
+  <p>При первом запуске в файле <Code>CinemaApp.MainPage.xaml.cs</code> раскоментировать 19 строчку.</p>
+  <p>При первом запуске в файле <Code>CinemaApp.Infrastructure.Persistence.ApplicationDbContext.cs</code> раскоментировать 19 строчку.</p>
 
   # Preview
   <table cellspacing="0" cellpadding="0">
