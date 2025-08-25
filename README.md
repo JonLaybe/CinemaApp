@@ -49,7 +49,7 @@
   LEFT JOIN FilmGenre fg ON fl.Id = fg.FilmsId
   WHERE 
       fl.Name LIKE '%@surchStr%'
-      OR ac.Name LIKE '%%@surchStr%'
+      OR ac.Name LIKE '%@surchStr%'
       OR fg.GenresId IN (@numbers);
   </code>
   </pre>
